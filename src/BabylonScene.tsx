@@ -63,6 +63,11 @@ export class BabylonScene extends React.Component<SceneProps & React.HTMLAttribu
   }
 
   render () {
+    let pStyle = {
+        position: 'absolute',
+        width: '100%',
+        height: '100%'
+      };
     // 'rest' can contain additional properties that you can flow through to canvas:
     // (id, className, etc.)
     let { width, height } = this.props;
@@ -75,7 +80,8 @@ export class BabylonScene extends React.Component<SceneProps & React.HTMLAttribu
     }
 
     return (
-      <canvas
+      <canvas 
+        style={pStyle}
         {...opts}
         ref={this.onCanvasLoaded}
       />

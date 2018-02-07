@@ -39,9 +39,7 @@ export default class PageWithScene extends React.Component<{}, {}> {
 
     render() {               
         return (
-            <div>
-                <BabylonScene onSceneMount={this.onSceneMount} />
-            </div>
+            <BabylonScene onSceneMount={this.onSceneMount} />
         );
     }
 }
